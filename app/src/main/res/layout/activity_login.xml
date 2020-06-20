@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.LoginActivity"
+    android:background="#FBF9FA">
+
+    <ImageView
+        android:id="@+id/imgappicon"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/book_app_icon_web"/>
+    <TextView
+        android:id="@+id/txtappname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="VITAP BookHub"
+        android:textStyle="bold"
+        android:textSize="34sp"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        />
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:background="@drawable/box_login"
+        android:layout_marginLeft="20dp"
+        android:elevation="40dp">
+    <EditText
+        android:id="@+id/etemail"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Email"
+        android:padding="10dp"
+        android:textColor="#000000"
+        android:inputType="textEmailAddress"
+        android:textIsSelectable="false"
+        android:drawableLeft="@drawable/ic_person_black_24dp"
+
+        android:layout_marginLeft="10dp"
+        android:layout_margin="10dp"/>
+</LinearLayout>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/box_login"
+        android:elevation="40dp">
+    <EditText
+        android:id="@+id/etpassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:hint="Enter Password"
+        android:padding="10dp"
+        android:maxLength="15"
+        android:drawableLeft="@drawable/ic_lock_black_24dp"
+        android:textIsSelectable="false"
+        android:textColor="#000000"
+        android:inputType="textPassword"
+        android:layout_margin="10dp"
+       />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/box_login"
+        android:elevation="40dp"
+        >
+        <Button
+            android:id="@+id/btnlogin"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:text="Login"
+            android:textStyle="bold"
+            android:textColor="#711A1A"
+            android:textSize="24sp"
+
+            android:background="@drawable/box_login"/>
+
+    </LinearLayout>
+    <TextView
+        android:id="@+id/txtForgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password ?"
+        android:textSize="24sp"
+        android:textColor="#333232"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"/>
+    <TextView
+        android:id="@+id/txtRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dont have account,click here to Register"
+        android:textColor="#333232"
+        android:textSize="18sp"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        />
+
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "393184986448",
+    "firebase_url": "https://vitap-bookhub-4f07c.firebaseio.com",
+    "project_id": "vitap-bookhub-4f07c",
+    "storage_bucket": "vitap-bookhub-4f07c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393184986448:android:2225c1477c02524e315855",
+        "android_client_info": {
+          "package_name": "com.hemanth.vitapbookhub"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393184986448-nc1rtpvcf6qq1vsvotilirfp3jb500o3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hemanth.vitapbookhub",
+            "certificate_hash": "d20028fb48e65f43e80533f2d42d4dc5797d661c"
+          }
+        },
+        {
+          "client_id": "393184986448-1gfl1cqik82bjfr7a258ck0rpf823ueu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3UokKaNmv1Fznzy_-RMSu_vnCTGO24LQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393184986448-1gfl1cqik82bjfr7a258ck0rpf823ueu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

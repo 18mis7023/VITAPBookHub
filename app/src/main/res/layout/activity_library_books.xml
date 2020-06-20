@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.LibraryBooksActivity">
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="SUBJECTS"
+        android:textSize="40sp"
+        android:textAlignment="center"
+        android:textColor="@color/brown"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"/>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box_login"
+        android:elevation="20dp"
+        >
+        <Button
+            android:id="@+id/btnMaths"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:text="MATHEMATICS"
+            android:textColor="@color/brown"
+            android:textSize="24sp"
+
+            android:background="@drawable/rectangle_shadow"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box_login"
+        android:elevation="20dp"
+        >
+        <Button
+            android:id="@+id/btncomputer"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:text="Computer and it"
+            android:textColor="#711A1A"
+            android:textSize="24sp"
+
+            android:background="@drawable/rectangle_shadow"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box_login"
+        android:elevation="20dp"
+        >
+        <Button
+            android:id="@+id/btnSoftware"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:text="Software Engineering"
+            android:textColor="#711A1A"
+            android:textSize="24sp"
+
+            android:background="@drawable/rectangle_shadow"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box_login"
+        android:elevation="20dp"
+        >
+        <Button
+            android:id="@+id/btnEnglish"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:text="English Books"
+            android:textColor="#711A1A"
+            android:textSize="24sp"
+
+            android:background="@drawable/rectangle_shadow"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box_login"
+        android:elevation="20dp"
+        >
+        <Button
+            android:id="@+id/btnelectronics"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:text="electronics"
+            android:textColor="#711A1A"
+            android:textSize="24sp"
+
+            android:background="@drawable/rectangle_shadow"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box_login"
+        android:elevation="20dp"
+        >
+        <Button
+            android:id="@+id/btnCivil"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:text="civil books"
+            android:textColor="#711A1A"
+            android:textSize="24sp"
+
+            android:background="@drawable/rectangle_shadow"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box_login"
+        android:elevation="20dp"
+        >
+        <Button
+            android:id="@+id/btnMechanical"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:text="Mechanical"
+            android:textColor="#711A1A"
+            android:textSize="24sp"
+
+            android:background="@drawable/rectangle_shadow"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="360dp"
+        android:layout_height="70dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/box_login"
+        android:elevation="20dp"
+        >
+        <Button
+            android:id="@+id/btnphysics"
+            android:layout_width="360dp"
+            android:layout_height="70dp"
+            android:text="Physics book"
+            android:textColor="#711A1A"
+            android:textSize="24sp"
+
+            android:background="@drawable/rectangle_shadow"/>
+
+    </LinearLayout>
+   </LinearLayout>
+</ScrollView>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="6"
+        android:background="@drawable/relative_layout_box">
+
+        <ImageView
+            android:id="@+id/imgrecyclerimage"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_weight="2.1"
+            android:background="@drawable/relative_layout_box"
+            android:src="@drawable/linearalgebra_gilbert_strang"
+            android:scaleType="centerCrop"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+<RelativeLayout
+    android:layout_width="0dp"
+    android:layout_height="match_parent"
+    android:layout_weight="3.9">
+        <TextView
+            android:id="@+id/txtrecyclerbook"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textSize="18sp"
+            android:text="LinearAlgebra And Its Applications"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:padding="5dp"
+            android:textAlignment="center"
+            />
+        <TextView
+            android:id="@+id/txtrecyclerauthor"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:text="Gilbert strang"
+            android:layout_below="@+id/txtrecyclerbook"
+            android:padding="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#615B5B"
+            android:textAlignment="center"/>
+
+        <Button
+            android:id="@+id/btnDownload"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_below="@id/txtrecyclerauthor"
+            android:background="@drawable/rectangle_shadow"
+            android:text="DOWNLOAD"
+            android:textColor="@color/brown"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            />
+</RelativeLayout>
+       <!-- <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8">
+        <TextView
+            android:id="@+id/txtratring"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:drawableRight="@drawable/ic_star_black_24dp"
+            android:text="4.0"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:layout_marginTop="30dp"/>
+        <Button
+            android:id="@+id/btnfavorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtratring"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_favorite_border_black_24dp"/>
+        </RelativeLayout>-->
+    </LinearLayout>
+</RelativeLayout>

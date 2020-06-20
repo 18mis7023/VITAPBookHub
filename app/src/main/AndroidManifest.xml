@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.hemanth.vitapbookhub">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/book_app_icon_web"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".Activity.interview.OsActivity"></activity>
+        <activity android:name=".Activity.interview.DbmsActivity" />
+        <activity android:name=".Activity.interview.CActivity" />
+        <activity android:name=".Activity.interview.JavaActivity" />
+        <activity android:name=".Activity.InterviewQuestionsActivity" />
+        <activity android:name=".Activity.Books.PhysicsActivity" />
+        <activity android:name=".Activity.Books.MechanicalActivity" />
+        <activity android:name=".Activity.Books.CivilActivity" />
+        <activity android:name=".Activity.Books.ElectronicsActivity" />
+        <activity android:name=".Activity.Books.EnglishActivity" />
+        <activity android:name=".Activity.Books.SoftwareActivity" />
+        <activity android:name=".Activity.Books.ComputerActivity" />
+        <activity android:name=".Activity.Books.DownloadActivity" />
+        <activity android:name=".Activity.Books.DownloadViewActivity" />
+        <activity android:name=".Activity.Books.MathsActivity" />
+        <activity android:name=".Activity.LibraryJoournalsActivity" />
+        <activity android:name=".Activity.LibraryBooksActivity" />
+        <activity android:name=".Activity.JournalsActivity" />
+        <activity android:name=".Activity.HomeActivity" />
+        <activity android:name=".Activity.ForgotPasswordActivity" />
+        <activity android:name=".Activity.RegisterActivity" />
+        <activity android:name=".Activity.MainActivity" />
+        <activity android:name=".Activity.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

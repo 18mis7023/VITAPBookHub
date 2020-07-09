@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment.FeedBackFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <EditText
+        android:id="@+id/etfeedbackName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:minLines="1"
+        android:maxLines="2"
+        android:layout_margin="20dp"
+        android:layout_marginTop="10dp"
+        android:hint="Enter Your Name"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/etfeedback"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:minLines="5"
+        android:maxLines="10"
+        android:layout_marginTop="10dp"
+        android:hint="Write Your FeedBack"
+        android:padding="10dp"
+        android:layout_margin="20dp"
+        />
+        <RatingBar
+            android:id="@+id/ratingfeedback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:stepSize="0.5"
+            android:numStars="5"
+            android:rating="4.5"
+            android:layout_marginLeft="80dp"
+            android:theme="@style/Widget.AppCompat.RatingBar"
+            android:progressTint="@color/yellow"
+            />
+        <Button
+            android:id="@+id/btnfeedback"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/feedback_button"
+            android:layout_margin="40dp"
+            android:text="Send FeedBack"
+            android:textSize="24sp"/>
+    </LinearLayout>
+
+</FrameLayout>

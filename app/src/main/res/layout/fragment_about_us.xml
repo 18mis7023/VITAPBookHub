@@ -16,16 +16,62 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="DEVELOPERS"
+            android:layout_height="80dp"
+            android:autoSizeTextType="uniform"
+            android:text="CSI DEVELOPERS"
             android:textSize="38dp"
             android:textStyle="bold"
             android:textAlignment="center"
             android:textColor="@color/brown"
             android:padding="10dp"
             />
-
         <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="500dp"
+            android:src="@drawable/csi_logo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="For any Queries/Issues :"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:textColor="@color/colorPrimary"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:text="Contact Us:"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:padding="5dp"
+                android:textStyle="italic"
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/colorPrimary"/>
+            <TextView
+                android:id="@+id/txtaboutemail"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:text="@string/GmailId"
+                android:textIsSelectable="true"
+                android:textStyle="italic"
+                android:textSize="20sp"
+               android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:contextClickable="true"
+
+                android:autoSizeTextType="uniform"
+                android:textColor="@color/colorPrimary"/>
+
+        </LinearLayout>
+        <!--<ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/oval_box"
@@ -184,7 +230,7 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_marginTop="5dp"
-            android:background="@color/Black"/>
+            android:background="@color/Black"/>-->
     </LinearLayout>
 </ScrollView>
 </FrameLayout>

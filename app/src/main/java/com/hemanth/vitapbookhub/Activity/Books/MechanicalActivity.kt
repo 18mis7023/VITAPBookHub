@@ -1,14 +1,23 @@
 package com.hemanth.vitapbookhub.Activity.Books
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.hemanth.vitapbookhub.Activity.InterviewActivity
+import com.hemanth.vitapbookhub.Activity.LibraryBooksActivity
 import com.hemanth.vitapbookhub.Adapter.CivilRecyclerAdapter
 import com.hemanth.vitapbookhub.Adapter.MechanicalRecyclerAdapter
 import com.hemanth.vitapbookhub.R
 import com.hemanth.vitapbookhub.model.Book
+import kotlinx.android.synthetic.main.activity_journals.*
+import kotlinx.android.synthetic.main.activity_mechanical.*
+import java.util.*
+import kotlin.Comparator
 
 class MechanicalActivity : AppCompatActivity() {
     lateinit var recyclermechanical: RecyclerView
@@ -22,7 +31,7 @@ class MechanicalActivity : AppCompatActivity() {
         Book("Advanced Materials-Mechanics and Applications","Ivan A.Parinov","https://firebasestorage.googleapis.com/v0/b/vitap-bookhub-9c2cc.appspot.com/o/Civil%20%2FMechanical%2FAdvanced%20Materials%20-%20Manufacturing%2C%20Physics%2C%20Mechanics%20and%20Applications%20(Ivan%20A.Parinov%2C%20et%20al.%2C%20(Ed.)%2C%202016)%20-%20Book.pdf?alt=media&token=b81e9391-3bd8-495d-9b72-42a831fb1572",R.drawable.advanced_materials),
         Book("Advanced Fluid Dynamics","Hyoung Woo oh","https://firebasestorage.googleapis.com/v0/b/vitap-bookhub-9c2cc.appspot.com/o/Civil%20%2FMechanical%2FAdvanced%20Fluid%20Dynamics%20(Hyoung%20Woo%20Oh%2C%20(Ed.)%2C%202012)%20-%20Book.pdf?alt=media&token=c7ebc391-6263-4c91-a9c5-b0c129890303",R.drawable.advanced_fluid_dynamics),
         Book("Advanced Energy Design Guide for Small Retail Buildings","Ashrae","https://firebasestorage.googleapis.com/v0/b/vitap-bookhub-9c2cc.appspot.com/o/Civil%20%2FMechanical%2FAdvanced%20Energy%20Design%20Guide%20for%20Small%20Retail%20Buildings%20(ASHRAE%2C%202006)%20-%20Book.pdf?alt=media&token=e4f647c7-4f27-47bb-a599-43cec9e467da",R.drawable.advanced_energy_design),
-        Book("A Mathematical Introduction to Fluid Mechanics","Alexandre Chorin,Jerrold E.Marsdan","https://firebasestorage.googleapis.com/v0/b/vitap-bookhub-9c2cc.appspot.com/o/Civil%20%2FMechanical%2FA%20Mathematical%20Introduction%20to%20Fluid%20Mechanics%20(Alexandre%20Chorin%2C%20Jerrold%20E.%20Marsden%2C%201992)%20-%20Book.pdf?alt=media&token=abbda233-63b5-46b7-8c27-2e1af3093d23",R.drawable.fluid_mechanics),
+        Book("A Mathematical Introduction to Fluid Mechanics","Alexandre Chorin","https://firebasestorage.googleapis.com/v0/b/vitap-bookhub-9c2cc.appspot.com/o/Civil%20%2FMechanical%2FA%20Mathematical%20Introduction%20to%20Fluid%20Mechanics%20(Alexandre%20Chorin%2C%20Jerrold%20E.%20Marsden%2C%201992)%20-%20Book.pdf?alt=media&token=abbda233-63b5-46b7-8c27-2e1af3093d23",R.drawable.fluid_mechanics),
         Book("A first cours in fluid dynamics","A.R.Paterson","https://firebasestorage.googleapis.com/v0/b/vitap-bookhub-9c2cc.appspot.com/o/Civil%20%2FMechanical%2FA%20First%20Course%20in%20Fluid%20Dynamics%20(A.R.Paterson)%20-%20Book.pdf?alt=media&token=e5b3c435-7252-458d-b942-5e0a3d6c32cf",R.drawable.fluid_dynamics),
         Book("3D Shape-Its Unique Place in Visual Perception","Zygmunt Pizlo","https://firebasestorage.googleapis.com/v0/b/vitap-bookhub-9c2cc.appspot.com/o/Civil%20%2FMechanical%2F3D%20Shape%20-%20Its%20Unique%20Place%20in%20Visual%20Perception%20(Zygmunt%20Pizlo%2C%202008)%20-%20Book.pdf?alt=media&token=0679b76f-2fac-422c-baf0-d104d231c0b4",R.drawable.d_shape_visual_perception),
         Book("3D printing in space","**2020**","https://firebasestorage.googleapis.com/v0/b/vitap-bookhub-9c2cc.appspot.com/o/Civil%20%2FMechanical%2F3D%20Printing%20in%20Space%20(2014)%20-%20Book.pdf?alt=media&token=d9891745-c1a6-4f03-8400-a0dbab69655a",R.drawable.d_printing_in_space),
@@ -33,10 +42,15 @@ class MechanicalActivity : AppCompatActivity() {
 
     var url:String=""
     lateinit var recycleradapter: MechanicalRecyclerAdapter
+    var order=-1
+    var ratingcomparator=Comparator<Book>{book1,book2->
+        book1.bookName.compareTo(book2.bookName,true)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_mechanical)
+        SetUpToolbar()
         recyclermechanical=findViewById(R.id.recyclermechanical)
         layoutManager= LinearLayoutManager(this)
         recycleradapter= MechanicalRecyclerAdapter(this,bookInfoList)
@@ -48,5 +62,49 @@ class MechanicalActivity : AppCompatActivity() {
                 (layoutManager as LinearLayoutManager).orientation
             )
         )
+    }
+    fun SetUpToolbar(){
+        setSupportActionBar(tmechanicaloolbar)
+        supportActionBar?.title="Mechanical"
+        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id=item?.itemId
+        when(id)
+        {
+            android.R.id.home ->{
+                startActivity(Intent(this, LibraryBooksActivity::class.java))
+                finish()
+            }
+            R.id.action_sort_inc ->{
+                if(order==1) {
+                    Collections.sort(bookInfoList, ratingcomparator)
+                    order=0
+                }
+                else if(order==0)
+                {
+                    Collections.sort(bookInfoList, ratingcomparator)
+                    bookInfoList.reverse()
+                    order=1
+                }
+                else
+                {
+                    Collections.sort(bookInfoList, ratingcomparator)
+                    order=0
+                }
+            }
+        }
+        recycleradapter.notifyDataSetChanged()
+
+        return super.onOptionsItemSelected(item)
+
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_dashboard,menu)
+        return super.onCreateOptionsMenu(menu)
     }
 }

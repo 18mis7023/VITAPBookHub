@@ -14,7 +14,6 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hemanth.vitapbookhub.Activity.Books.DownloadActivity
 import com.hemanth.vitapbookhub.R
 import com.hemanth.vitapbookhub.model.Book
-import com.internshala.bookhub.database.BookEntity
 
 class PhysicsRecyclerAdapter (val context: Context, val itemList:ArrayList<Book>) : RecyclerView.Adapter<PhysicsRecyclerAdapter.PhysicsViewHolder>() {
     class PhysicsViewHolder(view: View) : RecyclerView.ViewHolder(view) {

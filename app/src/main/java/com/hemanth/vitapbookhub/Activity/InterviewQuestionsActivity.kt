@@ -4,10 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.hemanth.vitapbookhub.Activity.Books.DownloadViewActivity
-import com.hemanth.vitapbookhub.Activity.interview.CActivity
-import com.hemanth.vitapbookhub.Activity.interview.DbmsActivity
-import com.hemanth.vitapbookhub.Activity.interview.JavaActivity
-import com.hemanth.vitapbookhub.Activity.interview.OsActivity
+import com.hemanth.vitapbookhub.Activity.interview.*
 import com.hemanth.vitapbookhub.R
 import kotlinx.android.synthetic.main.activity_interview_questions.*
 
@@ -21,12 +18,31 @@ class InterviewQuestionsActivity : AppCompatActivity() {
         }
         relativelayoutC.setOnClickListener {
             startActivity(Intent(this,CActivity::class.java))
+            finish()
         }
         relativelayoutDatabase.setOnClickListener {
             startActivity(Intent(this, DbmsActivity::class.java))
+            finish()
         }
         relativelayoutOS.setOnClickListener {
             startActivity(Intent(this, OsActivity::class.java))
+            finish()
+        }
+        relativelayoutWebDevelopment.setOnClickListener {
+            startActivity(Intent(this, HtmlActivity::class.java))
+            finish()
+        }
+        relativelayoutpython.setOnClickListener {
+            startActivity(Intent(this,PhythonActivity::class.java))
+            finish()
+        }
+        relativelayoutPHPDevelopment.setOnClickListener {
+            startActivity(Intent(this,PhpActivity::class.java))
+            finish()
+        }
+        relativelayoutnetworking.setOnClickListener {
+            startActivity(Intent(this,NetworkingActivity::class.java))
+            finish()
         }
     }
 }

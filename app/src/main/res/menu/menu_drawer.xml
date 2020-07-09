@@ -5,10 +5,10 @@
         android:id="@+id/dashboard"
         android:title="@string/dashboard"
         android:icon="@drawable/ic_home_black_24dp"/>
-    <item
+    <!--<item
         android:id="@+id/favourites"
         android:title="@string/favourites"
-        android:icon="@drawable/ic_favorite_border_black_24dp"/>
+        android:icon="@drawable/ic_favorite_border_black_24dp"/>-->
     <item
         android:id="@+id/profile"
         android:title="@string/profile"
@@ -17,6 +17,10 @@
         android:id="@+id/aboutUs"
         android:title="@string/about_us"
         android:icon="@drawable/ic_info_outline_black_24dp"/>
+    <item
+       android:id="@+id/Feedback"
+       android:title="@string/feedback"
+       android:icon="@drawable/ic_feedback_black_24dp"/>
     <item
         android:id="@+id/logout"
         android:title="Logout"

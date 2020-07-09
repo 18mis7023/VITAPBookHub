@@ -5,4 +5,8 @@
     <color name="colorAccent">#565958</color>
     <color name="brown">#711A1A</color>
     <color name="Black">#000000</color>
+    <color name="yellow">#FFEB3B</color>
+
+    <color name="Mustardyellow">#FF9800</color>
+
 </resources>

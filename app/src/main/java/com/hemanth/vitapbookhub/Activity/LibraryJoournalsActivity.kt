@@ -1,13 +1,20 @@
 package com.hemanth.vitapbookhub.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.hemanth.vitapbookhub.Adapter.HomeRecyclerAdapter
 import com.hemanth.vitapbookhub.R
 import com.hemanth.vitapbookhub.model.Book
+import kotlinx.android.synthetic.main.activity_journals.*
+import kotlinx.android.synthetic.main.activity_library_joournals.*
+import java.util.*
+import kotlin.Comparator
 
 class LibraryJoournalsActivity : AppCompatActivity() {
     lateinit var recyclerhome: RecyclerView
@@ -33,11 +40,15 @@ class LibraryJoournalsActivity : AppCompatActivity() {
         )
     var url:String=""
     lateinit var recycleradapter: HomeRecyclerAdapter
-
+    var order=-1
+    var ratingcomparator=Comparator<Book>{book1,book2->
+        book1.bookName.compareTo(book2.bookName,true)
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_library_joournals)
+        SetUpToolbar()
         recyclerhome=findViewById(R.id.recyclerHome)
         layoutManager=LinearLayoutManager(this)
         recycleradapter= HomeRecyclerAdapter(this,bookInfoList)
@@ -50,4 +61,49 @@ class LibraryJoournalsActivity : AppCompatActivity() {
         ))
 
     }
+    fun SetUpToolbar(){
+        setSupportActionBar(libraryjournaltoolbar)
+        supportActionBar?.title="Journals"
+        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id=item?.itemId
+        when(id)
+        {
+            android.R.id.home ->{
+                startActivity(Intent(this, HomeActivity::class.java))
+                finish()
+            }
+            R.id.action_sort_inc ->{
+                if(order==1) {
+                    Collections.sort(bookInfoList, ratingcomparator)
+                    order=0
+                }
+                else if(order==0)
+                {
+                    Collections.sort(bookInfoList, ratingcomparator)
+                    bookInfoList.reverse()
+                    order=1
+                }
+                else
+                {
+                    Collections.sort(bookInfoList, ratingcomparator)
+                    order=0
+                }
+            }
+        }
+        recycleradapter.notifyDataSetChanged()
+
+        return super.onOptionsItemSelected(item)
+
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_dashboard,menu)
+        return super.onCreateOptionsMenu(menu)
+    }
+
 }

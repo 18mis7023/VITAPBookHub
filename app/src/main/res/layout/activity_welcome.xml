@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/Mustardyellow"
+    tools:context=".Activity.WelcomeActivity">
+
+    <ImageView
+        android:id="@+id/imgwelcomeicon"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/book_welcome_icon"
+        />
+
+    <TextView
+        android:id="@+id/txtbookname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/averia_libre_bold_italic"
+        android:text="WELCOME TO VITAP BOOKHUB"
+        android:textAlignment="center"
+        android:textColor="#101010"
+        android:textSize="40sp"
+        android:layout_marginBottom="10dp"/>
+
+</LinearLayout>

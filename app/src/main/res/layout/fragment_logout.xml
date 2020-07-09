@@ -17,8 +17,10 @@
         android:orientation="vertical">
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="70dp"
             android:text="VITAP BOOKHUB"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="34sp"
             android:textColor="@color/brown"
             android:textSize="38sp"
             android:textStyle="bold"
@@ -28,36 +30,50 @@
             />
     <ImageView
         android:id="@+id/imgprofile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/vitapbookhub_icon"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:src="@drawable/ic_person_black_24dp"
+        android:tintMode="add"
         android:background="@drawable/oval_box"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="80dp"
-        android:layout_marginBottom="40dp"
+        android:layout_marginBottom="5dp"
 
         />
         <TextView
-            android:id="@+id/txtlogoutemail"
+            android:id="@+id/txtlogoutname"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_margin="10dp"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:autoSizeTextType="uniform"
+            android:layout_margin="5dp"
             android:textSize="18sp"
             android:textAlignment="center"/>
+        <TextView
+            android:id="@+id/txtlogoutemail"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:padding="5dp"
+            android:layout_margin="5dp"
+            android:textSize="18sp"
+            android:autoSizeTextType="uniform"
+            android:textAlignment="center"/>
+
         <Button
             android:id="@+id/btnlogout"
             android:layout_width="200dp"
             android:layout_height="60dp"
-            android:layout_marginLeft="80dp"
+            android:layout_marginLeft="70dp"
             android:background="#fefefe"
             android:text="LOGOUT"
             android:textSize="24sp"
-            android:textColor="@color/brown"
-            android:layout_marginBottom="10dp"
+            android:textColor="#ffffff"
+            android:layout_marginBottom="20dp"
             android:textAlignment="center"
             android:textStyle="bold"
+            android:layout_marginTop="10dp"
             android:elevation="40dp"
+            android:backgroundTint="@color/Mustardyellow"
 
             />
 

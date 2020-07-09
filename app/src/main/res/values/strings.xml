@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">VITAP BookHub</string>
+    <string name="app_name">BookHub</string>
     <string name="dashboard">Home</string>
     <string name="favourites">Favourites</string>
     <string name="about_us">About Us</string>
@@ -8,7 +8,16 @@
     <string name="close_drawer">Close Drawer</string>
     <string name="preference_file_name">BookHub Preferences</string>
 
+    <string name="Electronics">https://firebasestorage.googleapis.com/v0/b/vitap-bookhub-4f07c.appspot.com/o/Electronics</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="c_course"><![CDATA[C & C++]]></string>
+    <string name="feedback">FeedBack</string>
+    <string name="inc_sort">A to Z</string>
+    <string name="GmailId"><u>developer.vitapbookhub@gmail.com</u></string>
+    <string name="interview_questions">INTERVIEW QUESTIONS</string>
+    <string name="companies">Companies</string>
+    <string name="sign_in_with_google">Sign In With Google</string>
+    <string name="no_favorites">you do not have any Favorite Books</string>
 </resources>

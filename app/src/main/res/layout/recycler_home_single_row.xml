@@ -25,10 +25,12 @@
     android:layout_weight="3.9">
         <TextView
             android:id="@+id/txtrecyclerbook"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_height="75dp"
             android:layout_marginTop="10dp"
             android:textSize="18sp"
+            android:autoSizeMaxTextSize="20sp"
+            android:autoSizeTextType="uniform"
             android:text="LinearAlgebra And Its Applications"
             android:textColor="#000000"
             android:textStyle="bold"
@@ -37,9 +39,11 @@
             />
         <TextView
             android:id="@+id/txtrecyclerauthor"
-            android:layout_width="220dp"
-            android:layout_height="wrap_content"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
             android:text="Gilbert strang"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="20sp"
             android:layout_below="@+id/txtrecyclerbook"
             android:padding="10dp"
             android:textSize="18sp"
@@ -53,17 +57,19 @@
             android:layout_height="50dp"
             android:layout_below="@id/txtrecyclerauthor"
             android:background="@drawable/rectangle_shadow"
+            android:autoSizeTextType="uniform"
+            android:autoSizeMaxTextSize="20sp"
             android:text="DOWNLOAD"
             android:textColor="@color/brown"
             android:textStyle="bold"
             android:textSize="20sp"
             />
 </RelativeLayout>
-       <!-- <RelativeLayout
+        <!--<RelativeLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="0.8">
-        <TextView
+        &lt;!&ndash;<TextView
             android:id="@+id/txtratring"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -72,12 +78,11 @@
             android:text="4.0"
             android:textSize="20sp"
             android:textColor="#000000"
-            android:layout_marginTop="30dp"/>
+            android:layout_marginTop="30dp"/>&ndash;&gt;
         <Button
             android:id="@+id/btnfavorite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtratring"
             android:layout_marginTop="30dp"
             android:background="@drawable/ic_favorite_border_black_24dp"/>
         </RelativeLayout>-->

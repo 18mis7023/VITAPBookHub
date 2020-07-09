@@ -1,14 +1,22 @@
 package com.hemanth.vitapbookhub.Activity.Books
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.hemanth.vitapbookhub.Activity.LibraryBooksActivity
 import com.hemanth.vitapbookhub.Adapter.PhysicsRecyclerAdapter
 import com.hemanth.vitapbookhub.Adapter.SoftwareRecyclerAdapter
 import com.hemanth.vitapbookhub.R
 import com.hemanth.vitapbookhub.model.Book
+import kotlinx.android.synthetic.main.activity_electronics.*
+import kotlinx.android.synthetic.main.activity_physics.*
+import java.util.*
+import kotlin.Comparator
 
 class PhysicsActivity : AppCompatActivity() {
     lateinit var recyclerphysics: RecyclerView
@@ -33,10 +41,16 @@ class PhysicsActivity : AppCompatActivity() {
 
     var url:String=""
     lateinit var recycleradapter: PhysicsRecyclerAdapter
+    var order=-1
+    var ratingcomparator=Comparator<Book>{book1,book2->
+        book1.bookName.compareTo(book2.bookName,true)
+    }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_physics)
+        SetUpToolbar()
         recyclerphysics=findViewById(R.id.recyclersoftware)
         layoutManager= LinearLayoutManager(this)
         recycleradapter= PhysicsRecyclerAdapter(this,bookInfoList)
@@ -49,5 +63,49 @@ class PhysicsActivity : AppCompatActivity() {
             )
         )
 
+    }
+    fun SetUpToolbar(){
+        setSupportActionBar(physicstoolbar)
+        supportActionBar?.title="Physics"
+        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val id=item?.itemId
+        when(id)
+        {
+            android.R.id.home ->{
+                startActivity(Intent(this, LibraryBooksActivity::class.java))
+                finish()
+            }
+            R.id.action_sort_inc ->{
+                if(order==1) {
+                    Collections.sort(bookInfoList, ratingcomparator)
+                    order=0
+                }
+                else if(order==0)
+                {
+                    Collections.sort(bookInfoList, ratingcomparator)
+                    bookInfoList.reverse()
+                    order=1
+                }
+                else
+                {
+                    Collections.sort(bookInfoList, ratingcomparator)
+                    order=0
+                }
+            }
+        }
+        recycleradapter.notifyDataSetChanged()
+
+        return super.onOptionsItemSelected(item)
+
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.menu_dashboard,menu)
+        return super.onCreateOptionsMenu(menu)
     }
 }

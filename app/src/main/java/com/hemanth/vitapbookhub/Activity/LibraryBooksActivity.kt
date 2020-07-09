@@ -14,27 +14,35 @@ class LibraryBooksActivity : AppCompatActivity() {
         setContentView(R.layout.activity_library_books)
         btnMaths.setOnClickListener{
             startActivity(Intent(this,MathsActivity::class.java))
+            finish()
         }
         btncomputer.setOnClickListener{
             startActivity(Intent(this,ComputerActivity::class.java))
+            finish()
         }
         btnSoftware.setOnClickListener{
             startActivity(Intent(this,SoftwareActivity::class.java))
+            finish()
         }
         btnEnglish.setOnClickListener{
             startActivity(Intent(this,EnglishActivity::class.java))
+            finish()
         }
         btnelectronics.setOnClickListener{
             startActivity(Intent(this,ElectronicsActivity::class.java))
+            finish()
         }
         btnCivil.setOnClickListener{
             startActivity(Intent(this,CivilActivity::class.java))
+            finish()
         }
         btnMechanical.setOnClickListener{
             startActivity(Intent(this,MechanicalActivity::class.java))
+            finish()
         }
         btnphysics.setOnClickListener{
             startActivity(Intent(this,PhysicsActivity::class.java))
+            finish()
         }
 
     }

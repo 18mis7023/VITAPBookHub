@@ -11,12 +11,9 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
-import androidx.room.Room
 import com.hemanth.vitapbookhub.Activity.Books.DownloadActivity
 import com.hemanth.vitapbookhub.R
 import com.hemanth.vitapbookhub.model.InterviewBook
-import com.internshala.bookhub.database.BookDatabase
-import com.internshala.bookhub.database.BookEntity
 
 class JavaRecyclerAdapter(val context: Context, val itemList:ArrayList<InterviewBook>) : RecyclerView.Adapter<JavaRecyclerAdapter.JavaViewHolder>() {
     class JavaViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -24,7 +21,7 @@ class JavaRecyclerAdapter(val context: Context, val itemList:ArrayList<Interview
         val txtrecyclebook: TextView = view.findViewById(R.id.txttopic)
         val txtrecycleauthor: TextView = view.findViewById(R.id.txtdiff)
         val btndownload: Button = view.findViewById(R.id.recyclerdownload)
-        val btnfavourite:Button=view.findViewById(R.id.btnfavorite)
+        //val btnfavourite:Button=view.findViewById(R.id.btnfavorite)
         /*val bookEntity = BookEntity(
             bookId?.toInt() as Int,
             txtrecyclebook.text.toString(),
@@ -61,9 +58,9 @@ class JavaRecyclerAdapter(val context: Context, val itemList:ArrayList<Interview
             ContextCompat.startActivity(context, intent, bundle)
 
         }
-        holder.btnfavourite.setOnClickListener {
+       /* holder.btnfavourite.setOnClickListener {
 
-        }
+        }*/
 
     }
    /* class DBAsyncTask(val context: Context, val bookEntity: BookEntity, val mode: Int) :

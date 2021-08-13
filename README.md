@@ -1,5 +1,6 @@
 # VITAPBookHub
-All types of books are available and interview questions also available
+Book hub Mobile App is a free app where you can download documents easily and can read. Any time you can Download the document what you need.
+Interview Question and topics PDF documents all are less than 2 Mb files. So can easily store in our device.
 In Book hub App Interview questions module contains so many topics like:
 **Previous year questions on interview of the companies.
 **Aptitude Multiple Choice Questions of All topics in Aptitude Section.

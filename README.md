@@ -9,7 +9,7 @@ In Book hub App Interview questions module contains so many topics like:
 **Specific Theory Concepts/subjects multiple choice questions also there in the Book hub App.
 **Common guidance for Interview Tips and activity also available in our Book hub Mobile App.
 
-Features
+## Features
 
 *Anyone can login though Google Sign In.
 *Free Journals, Novels are Available.
@@ -17,3 +17,16 @@ Features
 *Interview Question Will be given in the form of PDF document.
 *Download easily any document.
 *Book hub App has simple interface, Easily handled and secured
+
+
+## About The Project
+
+Programmed an Android application to download the soft copies of the textbooks and journals that are available in our college ftp in an easy way for the students in VITAP.
+
+Tested the application in real-time and deployed the app in Google Play store, as the app will be useful for all the students in the VITAP students and integrated with google drive so that users can view pdf in google drive also.
+
+Utilized object-oriented programming practices such as inheritance to create different types of books of categories.
+
+## Technologies used in the project
+
+Kotlin, Android Studio, Firebase, Figma 

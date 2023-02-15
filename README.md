@@ -12,10 +12,15 @@ In Book hub App Interview questions module contains so many topics like:
 ## Features
 
 *Anyone can login though Google Sign In.
+
 *Free Journals, Novels are Available.
+
 *Specific/recommended/important textbooks for courses offered in VIT-AP campus books will be available here. This feature is more useful for VIT-AP students.
+
 *Interview Question Will be given in the form of PDF document.
+
 *Download easily any document.
+
 *Book hub App has simple interface, Easily handled and secured
 
 
